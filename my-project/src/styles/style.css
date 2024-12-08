@@ -1,0 +1,258 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background-color: #000000; /* Black */
+  color: #e5e5e5; /* Light gray */
+  margin: 0;
+  padding: 0;
+}
+
+/* Header Styles */
+header {
+  background: #14213d; /* Deep blue */
+  color: #ffffff; /* White */
+  padding: 1rem 0;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #fca311; /* Orange */
+}
+
+header nav a {
+  color: #e5e5e5; /* Light gray */
+  text-decoration: none;
+  font-size: 1rem;
+  margin: 0 0.5rem;
+}
+
+header nav a:hover {
+  color: #fca311; /* Orange */
+  text-decoration: underline;
+}
+
+/* Search Box */
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem 1rem;
+  background-color: #14213d; /* Deep blue */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  flex-wrap: wrap;
+}
+
+.search-container input {
+  flex: 1;
+  max-width: 600px;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 2px solid #fca311; /* Orange */
+  border-radius: 4px 0 0 4px;
+  background-color: #e5e5e5; /* Light gray */
+  color: #14213d; /* Deep blue */
+}
+
+.search-container button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  color: #ffffff; /* White */
+  background: #fca311; /* Orange */
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.search-container button:hover {
+  background: #ffffff; /* White */
+  color: #fca311; /* Orange */
+  transform: scale(1.05);
+}
+
+/* Main Content (Index Page) */
+main {
+  padding: 2rem 1rem;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #fca311; /* Orange */
+  text-align: center;
+}
+
+/* Card Grid */
+.card-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: #14213d; /* Deep blue */
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.card .info {
+  padding: 1rem;
+  background: #fca311; /* Orange */
+  color: #000000; /* Black */
+  text-align: center;
+}
+
+.card .info h3 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.card .info p {
+  font-size: 0.9rem;
+}
+
+/* Details Page Styles */
+#details-container {
+  padding: 2rem 1rem;
+  background-color: #14213d; /* Deep blue */
+  color: #ffffff; /* White */
+  margin: 2rem auto;
+  border-radius: 10px;
+  max-width: 800px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.details-image img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
+  margin: 0 auto 1.5rem;
+  display: block;
+}
+
+.details-info h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #fca311; /* Orange */
+  text-align: center;
+}
+
+.details-info p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+}
+
+.details-meta {
+  list-style: none;
+  margin-top: 1rem;
+  padding: 0;
+}
+
+.details-meta li {
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.details-meta strong {
+  color: #fca311; /* Orange */
+}
+
+#back-button {
+  display: block;
+  margin: 2rem auto;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  background: #fca311; /* Orange */
+  color: #14213d; /* Deep blue */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+#back-button:hover {
+  background: #ffffff; /* White */
+  color: #fca311; /* Orange */
+  transform: scale(1.05);
+}
+
+/* Footer Styles */
+footer {
+  background: #14213d; /* Deep blue */
+  color: #e5e5e5; /* Light gray */
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header h1 {
+      font-size: 1.5rem;
+  }
+
+  .search-container input {
+      width: 100%;
+      border-radius: 4px;
+  }
+
+  .search-container button {
+      width: 100%;
+      border-radius: 4px;
+      margin-top: 0.5rem;
+  }
+
+  #details-container {
+      max-width: 95%;
+  }
+
+  .details-image img {
+      max-width: 100%;
+  }
+
+  .card img {
+      height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+      font-size: 1.2rem;
+  }
+
+  .card-list {
+      grid-template-columns: 1fr;
+  }
+
+  #back-button {
+      width: 100%;
+  }
+}
